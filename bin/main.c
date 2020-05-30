@@ -19,6 +19,7 @@ Posicao posicao;
 
 int validaPosicao(int res, Posicao posicao);
 int verificaVitoriaUm(Posicao posicao);
+int verificaVitoriaDois(Posicao posicao);
 
 int main()
 {
@@ -64,6 +65,13 @@ int main()
 	printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
 	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}
+	
 	switch(res)
 	{
 		case 1: posicao.c[0][0] = 'X';break;
@@ -96,7 +104,14 @@ int main()
 	
 	printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
-		
+	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}	
+	
 	switch(res)
 	{
 		case 1: posicao.c[0][0] = 'O';break;
@@ -130,6 +145,13 @@ int main()
 	printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
 	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}
+
 	switch(res)
 	{
 		case 1: posicao.c[0][0] = 'X';break;
@@ -162,6 +184,13 @@ int main()
 	
 	printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
+	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}
 	
 	switch(res)
 	{
@@ -196,6 +225,13 @@ int main()
 	printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
 	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}
+	
 	switch(res)
 	{
 		case 1: posicao.c[0][0] = 'X';break;
@@ -228,6 +264,13 @@ int main()
 	
 	printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
+	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}
 	
 	switch(res)
 	{
@@ -262,6 +305,13 @@ int main()
 	printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
 	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}
+	
 	switch(res)
 	{
 		case 1: posicao.c[0][0] = 'X';break;
@@ -294,6 +344,13 @@ int main()
 	
 	printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
+	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}
 	
 	switch(res)
 	{
@@ -328,6 +385,13 @@ int main()
 	printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
 	scanf("%d", &res);
 	
+	if(validaPosicao(res, posicao) == 0)
+	{
+		printf("\nJogada inválida!\n");
+		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+		scanf("%d", &res);			
+	}
+	
 	switch(res)
 	{
 		case 1: posicao.c[0][0] = 'X';break;
@@ -341,6 +405,15 @@ int main()
 		case 9: posicao.c[2][2] = 'X';break;
 	}
 	
+	system("cls");
+	
+	printf("\n");
+	printf("\t\t\t  %c  |  %c  |  %c  \n", posicao.c[0][0], posicao.c[0][1], posicao.c[0][2]);
+	printf("\t\t\t__________________\n");
+	printf("\t\t\t  %c  |  %c  |  %c  \n", posicao.c[1][0], posicao.c[1][1], posicao.c[1][2]);
+	printf("\t\t\t__________________\n");
+	printf("\t\t\t  %c  |  %c  |  %c  \n", posicao.c[2][0], posicao.c[2][1], posicao.c[2][2]);
+	
 	if(verificaVitoriaUm(posicao) == 1)
 	{
 		printf("\nJogador um vence!\n\n");
@@ -353,9 +426,9 @@ int main()
 	return 0;
 }
 
+//validar posicao
 int validaPosicao(int res, Posicao posicao)
 {
-	
 	switch(res)
 	{
 		case 1: 
