@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
-#include <string.h>
+#include <ctype.h>
 #define TAM 3
 
 typedef struct Posicao
@@ -17,15 +17,16 @@ typedef struct Posicao
 
 Posicao posicao;
 
-int validaPosicao(int res, Posicao posicao);
-int verificaVitoriaUm(Posicao posicao);
-int verificaVitoriaDois(Posicao posicao);
+int validaPosicao(int res, Posicao posicao);//Verifica se a casa já está preenchida
+int verificaVitoriaUm(Posicao posicao);//verifica a vitória do jogador um
+int verificaVitoriaDois(Posicao posicao);//verifica a vitória do jogador dois
 
 int main()
 {
 	setlocale(LC_ALL, "Portuguese, Brazil");
 	system("color F0");
 	
+	//tela inicial
 	printf("\n");
 	printf("==================================================================\n");
 	printf("|                  **********HASH GAME**********                 |\n");
@@ -43,6 +44,7 @@ int main()
 	getchar();
 		
 	int res, i, j;
+	char again;
 	
 	for(i=0; i<sizeof(res)/sizeof(char); i++)
 	{
@@ -119,7 +121,7 @@ int main()
 		while(validaPosicao(res, posicao) == 0)
 		{
 			printf("\nJogada inválida!\n");
-			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
 			scanf("%d", &res);	
 		}		
 	}	
@@ -214,7 +216,7 @@ int main()
 		while(validaPosicao(res, posicao) == 0)
 		{
 			printf("\nJogada inválida!\n");
-			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
 			scanf("%d", &res);	
 		}			
 	}
@@ -292,7 +294,18 @@ int main()
 	if(verificaVitoriaUm(posicao) == 1)
 	{
 		printf("\nJogador um vence!\n\n");
-		system("pause");
+		getchar();//limpar o buffer do \n
+		printf("Deseja continuar S/N: ");
+		scanf("%c", &again);
+		
+		again = toupper(again);//transformar carcatere em maiúsculo utilizando a biblioteca ctype
+		
+		if(again == 'S')
+		{
+			system("cls");
+			getchar();//limpar o buffer do \n
+			main();
+		}
 		return 0;
 	}
 	
@@ -308,7 +321,7 @@ int main()
 		while(validaPosicao(res, posicao) == 0)
 		{
 			printf("\nJogada inválida!\n");
-			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
 			scanf("%d", &res);	
 		}	
 	}
@@ -339,7 +352,18 @@ int main()
 	if(verificaVitoriaDois(posicao) == 1)
 	{
 		printf("\nJogador dois vence!\n\n");
-		system("pause");
+		getchar();//limpar o buffer do \n
+		printf("Deseja continuar S/N: ");
+		scanf("%c", &again);
+		
+		again = toupper(again);//transformar carcatere em maiúsculo utilizando a biblioteca ctype
+		
+		if(again == 'S')
+		{
+			system("cls");
+			getchar();//limpar o buffer do \n
+			main();
+		}
 		return 0;
 	}
 	
@@ -386,7 +410,18 @@ int main()
 	if(verificaVitoriaUm(posicao) == 1)
 	{
 		printf("\nJogador um vence!\n\n");
-		system("pause");
+		getchar();//limpar o buffer do \n
+		printf("Deseja continuar S/N: ");
+		scanf("%c", &again);
+		
+		again = toupper(again);//transformar carcatere em maiúsculo utilizando a biblioteca ctype
+		
+		if(again == 'S')
+		{
+			system("cls");
+			getchar();//limpar o buffer do \n
+			main();
+		}
 		return 0;
 	}
 	
@@ -402,7 +437,7 @@ int main()
 		while(validaPosicao(res, posicao) == 0)
 		{
 			printf("\nJogada inválida!\n");
-			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
 			scanf("%d", &res);	
 		}		
 	}
@@ -433,7 +468,18 @@ int main()
 	if(verificaVitoriaDois(posicao) == 1)
 	{
 		printf("\nJogador dois vence!\n\n");
-		system("pause");
+		getchar();//limpar o buffer do \n
+		printf("Deseja continuar S/N: ");
+		scanf("%c", &again);
+		
+		again = toupper(again);//transformar carcatere em maiúsculo utilizando a biblioteca ctype
+		
+		if(again == 'S')
+		{
+			system("cls");
+			getchar();//limpar o buffer do \n
+			main();
+		}
 		return 0;
 	}	
 	
@@ -479,12 +525,35 @@ int main()
 	if(verificaVitoriaUm(posicao) == 1)
 	{
 		printf("\nJogador um vence!\n\n");
-		system("pause");
+		getchar();//limpar o buffer do \n
+		printf("Deseja continuar S/N: ");
+		scanf("%c", &again);
+		
+		again = toupper(again);//transformar carcatere em maiúsculo utilizando a biblioteca ctype
+		
+		if(again == 'S')
+		{
+			system("cls");
+			getchar();//limpar o buffer do \n
+			main();
+		}
 		return 0;
 	}
 
 	printf("\nDeu velha!\n\n");
-	system("pause");
+	
+	getchar();//limpar o buffer do \n
+	printf("Deseja continuar S/N: ");
+	scanf("%c", &again);
+		
+	again = toupper(again);//transformar carcatere em maiúsculo utilizando a biblioteca ctype
+		
+	if(again == 'S')
+	{
+		system("cls");
+		getchar();//limpar o buffer do \n
+		main();
+	}
 	return 0;
 }
 
