@@ -564,9 +564,7 @@ int validaPosicao(int res, Posicao posicao)
 	{
 		case 1: 
 			if(posicao.c[0][0] != '\0')
-			{
 				return 0; //false
-			}
 			else
 				return 1; //true
 		case 2: 
@@ -609,6 +607,8 @@ int validaPosicao(int res, Posicao posicao)
 				return 0; //false
 			else
 				return 1; //true
+		default:
+			return 0;//false
 	}	
 }
 
