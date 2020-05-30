@@ -69,7 +69,13 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}		
 	}
 	
 	switch(res)
@@ -109,7 +115,13 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}		
 	}	
 	
 	switch(res)
@@ -149,7 +161,15 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);		
+		
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}
+		
 	}
 
 	switch(res)
@@ -189,7 +209,14 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);
+		
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}			
 	}
 	
 	switch(res)
@@ -229,7 +256,14 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);
+		
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}		
 	}
 	
 	switch(res)
@@ -269,7 +303,14 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);		
+		
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}	
 	}
 	
 	switch(res)
@@ -309,7 +350,14 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);
+		
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}		
 	}
 	
 	switch(res)
@@ -349,7 +397,14 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador dois (O) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);
+		
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}		
 	}
 	
 	switch(res)
@@ -389,7 +444,14 @@ int main()
 	{
 		printf("\nJogada inválida!\n");
 		printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
-		scanf("%d", &res);			
+		scanf("%d", &res);
+		
+		while(validaPosicao(res, posicao) == 0)
+		{
+			printf("\nJogada inválida!\n");
+			printf("\nJogador um (X) escolha uma posição de 1 à 9: ");
+			scanf("%d", &res);	
+		}			
 	}
 	
 	switch(res)
