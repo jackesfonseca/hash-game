@@ -16,8 +16,9 @@ typedef struct Posicao
 }Posicao;
 
 Posicao posicao;
+int flag = 0;
 
-int validaPosicao(int res, Posicao posicao);//Verifica se a casa já está preenchida
+int validaPosicao(int res, Posicao posicao);//Verifica se a posição é valida
 int verificaVitoriaUm(Posicao posicao);//verifica a vitória do jogador um
 int verificaVitoriaDois(Posicao posicao);//verifica a vitória do jogador dois
 
@@ -27,22 +28,24 @@ int main()
 	system("color F0");
 	
 	//tela inicial
-	printf("\n");
-	printf("==================================================================\n");
-	printf("|                  **********HASH GAME**********                 |\n");
-	printf("|                                                                |\n");
-	printf("|INSTRUÇÕES:                                                     |\n");
-	printf("|                                                                |\n");
-	printf("|* Para dois jogadores (X/O)                                     |\n");
-	printf("|* O jogador um (X) sempre inicia a partida                      |\n");
-	printf("|* Informe um número de 1 à 9 para posicionar a figura na casa   |\n");
-	printf("|                                                                |\n");
-	printf("|              pressione <enter> para iniciar o jogo             |\n");
-	printf("|                                                                |\n");
-	printf("==================================================================\n");
-	printf("\n");
-	getchar();
-		
+	if(flag == 0){
+		printf("\n");
+		printf("==================================================================\n");
+		printf("|                  **********HASH GAME**********                 |\n");
+		printf("|                                                                |\n");
+		printf("|INSTRUÇÕES:                                                     |\n");
+		printf("|                                                                |\n");
+		printf("|* Para dois jogadores (X/O)                                     |\n");
+		printf("|* O jogador um (X) sempre inicia a partida                      |\n");
+		printf("|* Informe um número de 1 à 9 para posicionar a figura na casa   |\n");
+		printf("|                                                                |\n");
+		printf("|              pressione <enter> para iniciar o jogo             |\n");
+		printf("|                                                                |\n");
+		printf("==================================================================\n");
+		printf("\n");
+		getchar();
+	}
+	
 	int res, i, j;
 	char again;
 	
@@ -302,6 +305,7 @@ int main()
 		
 		if(again == 'S')
 		{
+			flag ++;
 			system("cls");
 			getchar();//limpar o buffer do \n
 			main();
@@ -360,6 +364,7 @@ int main()
 		
 		if(again == 'S')
 		{
+			flag ++;
 			system("cls");
 			getchar();//limpar o buffer do \n
 			main();
@@ -418,6 +423,7 @@ int main()
 		
 		if(again == 'S')
 		{
+			flag ++;
 			system("cls");
 			getchar();//limpar o buffer do \n
 			main();
@@ -476,6 +482,7 @@ int main()
 		
 		if(again == 'S')
 		{
+			flag ++;
 			system("cls");
 			getchar();//limpar o buffer do \n
 			main();
@@ -533,6 +540,7 @@ int main()
 		
 		if(again == 'S')
 		{
+			flag ++;
 			system("cls");
 			getchar();//limpar o buffer do \n
 			main();
@@ -550,6 +558,7 @@ int main()
 		
 	if(again == 'S')
 	{
+		flag ++;
 		system("cls");
 		getchar();//limpar o buffer do \n
 		main();
